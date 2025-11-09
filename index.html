@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Rafael Gomide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meu Portfólio</h1>
+        </header>
+        
+        <section class="info-pessoal">
+            <h2>Rafael Henrique Oliveira Gomide</h2>
+            <div class="detalhes">
+                <p><strong>Desenvolvedor Front-end</strong></p>
+                <p>Estudante de Desenvolvimento Web</p>
+                <p>Email:rafael10076.rh@gmail.com</p>
+                <p>Idade: 21 anos</p>
+            </div>
+        </section>
+
+        <div id="ultimo-cadastro" class="ultimo-cadastro" style="display: none;">
+            <h3>📋 Último Cadastro Realizado</h3>
+            <div id="dados-ultimo-cadastro"></div>
+        </div>
+
+        <a href="form.html" class="btn btn-primario">Acessar Formulário de Cadastro</a>
+    </div>
+
+    <script>
+
+        const ultimoCadastro = localStorage.getItem('ultimoCadastro');
+        if (ultimoCadastro) {
+            const dados = JSON.parse(ultimoCadastro);
+            document.getElementById('dados-ultimo-cadastro').innerHTML = `
+                <p><strong>Nome:</strong> ${dados.nome} ${dados.sobrenome}</p>
+                <p><strong>Email:</strong> ${dados.email}</p>
+                <p><strong>Idade:</strong> ${dados.idade} anos</p>
+                <p><strong>Data do cadastro:</strong> ${dados.dataCadastro}</p>
+            `;
+            document.getElementById('ultimo-cadastro').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
