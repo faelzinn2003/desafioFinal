@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Formulário de Cadastro</h1>
+            <p>Preencha todos os campos obrigatórios (*)</p>
+        </header>
+
+        <form id="formulario-cadastro" class="formulario">
+            <div class="campo-formulario">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                <small class="mensagem-erro" id="erro-nome"></small>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="sobrenome">Sobrenome *</label>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome">
+                <small class="mensagem-erro" id="erro-sobrenome"></small>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com">
+                <small class="mensagem-erro" id="erro-email"></small>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="idade">Idade *</label>
+                <input type="number" id="idade" name="idade" min="1" max="119" placeholder="Sua idade">
+                <small class="mensagem-erro" id="erro-idade"></small>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="senha">Senha *</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                <small class="mensagem-erro" id="erro-senha"></small>
+            </div>
+
+            <div class="acoes-formulario">
+                <button type="submit" class="btn btn-primario">Enviar Dados</button>
+                <a href="index.html" class="btn btn-secundario">Voltar ao Início</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
